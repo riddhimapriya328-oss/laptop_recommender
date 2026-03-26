@@ -1,0 +1,301 @@
+/* LaptopCard.module.css */
+
+.cardsRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.15s;
+}
+.card:hover { border-color: var(--color-border-hover); }
+
+/* ── Header ────────────────────────────────────────────────── */
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cardTitles { flex: 1; }
+
+.laptopName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.laptopBrand {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.bestBadge {
+  font-size: 9px;
+  font-weight: 500;
+  padding: 3px 8px;
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Price ─────────────────────────────────────────────────── */
+.price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-success);
+}
+
+/* ── Score Bars ────────────────────────────────────────────── */
+.scores { display: flex; flex-direction: column; gap: 7px; }
+
+/* ── Spec Chips ────────────────────────────────────────────── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.chip {
+  font-size: 10px;
+  padding: 3px 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+}
+
+/* ── Value Score ───────────────────────────────────────────── */
+.valueScore {
+  font-size: 11px;
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+/* ── Excerpt ───────────────────────────────────────────────── */
+.excerpt {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Detail Link ───────────────────────────────────────────── */
+.detailLink {
+  font-size: 12px;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--color-border-hover);
+  transition: text-decoration-color 0.15s;
+}
+.detailLink:hover { text-decoration-color: var(--color-text-primary); }
+
+/* ── Score Bar (inside card) ───────────────────────────────── */
+.scoreBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scoreLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  width: 76px;
+  flex-shrink: 0;
+}
+
+.scoreTrack {
+  flex: 1;
+  height: 4px;
+  background: var(--color-surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.scoreFill {
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+.scorePct {
+  font-size: 10px;
+  color: var(--color-text-light);
+  width: 28px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Detail Panel ──────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 44, 42, 0.18);
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.panel {
+  width: 420px;
+  max-width: 100vw;
+  height: 100%;
+  background: #fff;
+  border-left: 1px solid var(--color-border);
+  overflow-y: auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideIn 0.22s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(40px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+.panelClose {
+  align-self: flex-end;
+  font-size: 18px;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+.panelClose:hover { color: var(--color-text-primary); }
+
+.panelName {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.panelPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.panelBrand { font-size: 13px; color: var(--color-text-muted); }
+
+.panelPrice {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  color: var(--color-success);
+}
+
+.specsTable { width: 100%; border-collapse: collapse; }
+
+.specsTable tr:nth-child(even) td { background: var(--color-surface); }
+
+.specsTable td {
+  padding: 8px 10px;
+  font-size: 13px;
+  border: none;
+}
+
+.specsTable td:first-child {
+  color: var(--color-text-muted);
+  width: 40%;
+  font-weight: 400;
+}
+
+.specsTable td:last-child {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.explanationText {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.whyNotText {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.valueScoreLarge {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.valueNum {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.valueDenom {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.panelButtons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.panelBtn {
+  padding: 9px 18px;
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.panelBtn:hover { background: var(--color-surface-2); }
+
+@media (max-width: 640px) {
+  .panel { width: 100vw; }
+  .cardsRow { flex-direction: column; }
+  .card { width: 100%; }
+}

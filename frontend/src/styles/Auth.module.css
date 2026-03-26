@@ -1,0 +1,160 @@
+/* Auth.module.css */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: 24px;
+}
+
+.logoTop {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 6px;
+}
+
+.subtext {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color 0.15s;
+}
+.inputField::placeholder { color: var(--color-text-muted); }
+.inputField:focus         { border-color: var(--color-border-hover); }
+
+.submitBtn {
+  width: 100%;
+  padding: 11px;
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: opacity 0.15s;
+}
+.submitBtn:hover    { opacity: 0.85; }
+.submitBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 0;
+}
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+.dividerText {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.googleBtn {
+  width: 100%;
+  padding: 11px;
+  background: #fff;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-hover);
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.15s;
+}
+.googleBtn:hover { background: var(--color-surface-2); }
+
+.benefits {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+.checkmark {
+  color: var(--color-success);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.footerLink {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.footerLink button {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 13px;
+}
+
+.error {
+  font-size: 12px;
+  color: #b94040;
+  background: #fdf0f0;
+  border: 1px solid rgba(185, 64, 64, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+}

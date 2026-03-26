@@ -1,0 +1,189 @@
+/* Landing.module.css */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+/* ── Nav ───────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.navLink:hover { color: var(--color-text-primary); }
+
+.navCta {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 20px;
+  background: var(--color-accent);
+  color: var(--color-accent-fg);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.navCta:hover { opacity: 0.85; }
+
+/* ── Hero ──────────────────────────────────────────────────── */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 64px 24px 48px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  max-width: 520px;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 380px;
+  margin-bottom: 48px;
+}
+
+/* ── Search Section ────────────────────────────────────────── */
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 580px;
+}
+
+.startLabel {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+/* ── How It Works ──────────────────────────────────────────── */
+.howSection {
+  padding: 48px 24px 40px;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.howTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: 36px;
+}
+
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  max-width: 160px;
+}
+
+.stepNum {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.stepText {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  text-align: center;
+}
+
+.stepConnector {
+  width: 40px;
+  height: 1px;
+  background: var(--color-border);
+  margin-top: 16px;
+  flex-shrink: 0;
+}
+
+/* ── Footer ────────────────────────────────────────────────── */
+.footer {
+  padding: 20px 40px;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.footerText {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .nav      { padding: 16px 20px; }
+  .hero     { padding: 40px 20px 32px; }
+  .steps    { flex-direction: column; align-items: center; gap: 20px; }
+  .stepConnector { display: none; }
+}
